@@ -4,17 +4,27 @@
 {% block title %}Password Generator{% endblock %}
 
 {% block navbar %}
-    <nav class="navbar navbar-default container">
-        <div class="navbar-header">
-            <div class="navbar-brand">Password Generator</a>
-        </div>
-    </nav>
+<nav class="navbar navbar-default container">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/">Password Generator</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/hutado/pswd_gen_flask">GitHub</a></li>
+        </ul>
+    </div>
+</nav>
 {% endblock %}
 
 {% block content %}
     <div class="container">
+        <div class="jumbotron">
+            <p>Пароль заданной длины получается в результате хэширования строки, склеенной из хэшей ключевого слова и сайта.</p>
+            <p>Пароль нигде не хранится.</p>
+            <p>Пароли для <b>google.com</b> и <b>https://www.google.ru/</b> будут разные, учтите это при восстановлении пароля.</p>
+        </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-12">
                 {{ wtf.quick_form(form) }}
             </div>
         </div>
