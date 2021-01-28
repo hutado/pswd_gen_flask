@@ -1,1 +1,1 @@
-web: gunicorn pswd_gen_flask:app
+web: gunicorn main:app
